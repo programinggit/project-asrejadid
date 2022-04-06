@@ -8,3 +8,5 @@ class  Computetion (models.Model):
     video = models.FileField(upload_to = "video_uploaded", null = True)
     date_uploaded = models.DateTimeField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
+    def __unicode__(self):
+        return self.user
